@@ -22,7 +22,7 @@ DECLARE
     $PAYLOAD$;
 
     -- =========================================================================
-    -- VARIABLES DE INFRAESTRUCTURA (NÚCLEO DEL SQUAD - NO MODIFICAR)
+    -- VARIABLES DE INFRAESTRUCTURA 
     -- =========================================================================
     v_db             TEXT;
     v_socket         TEXT;
@@ -36,7 +36,7 @@ BEGIN
     -- 1. Inicializar entorno y verbosidad
     SET client_min_messages = notice;
     RAISE NOTICE '=========================================================================';
-    RAISE NOTICE 'INICIANDO MATRIZ DE EJECUCIÓN OMNICANAL DEL DBA SQUAD';
+    RAISE NOTICE 'INICIANDO MATRIZ DE EJECUCIÓN';
     RAISE NOTICE '=========================================================================';
 
     -- 2. Gestión dinámica de dblink
@@ -113,7 +113,7 @@ BEGIN
     END IF;
 
     RAISE NOTICE '=========================================================================';
-    RAISE NOTICE 'OPERACIÓN OMNICANAL COMPLETADA BAJO ESTÁNDARES DBA SQUAD';
+    RAISE NOTICE 'OPERACIÓN COMPLETADA';
     RAISE NOTICE '=========================================================================';
 
 EXCEPTION WHEN OTHERS THEN
