@@ -4,11 +4,11 @@ DECLARE
     -- ZONA DE MANDO: CONFIGURACIÓN DE PARÁMETROS OPERATIVOS
     -- =========================================================================
     
-    -- v_dbs_to_include: Usa ARRAY['all'] para atacar todo, o especifica ARRAY['db1', 'db2']
+    -- v_dbs_to_include: Usa ARRAY['all'] para ejecutar en todas las DB, o especifica ARRAY['db1', 'db2']
     v_dbs_to_include TEXT[] := ARRAY['all'];  
     
     -- v_dbs_to_exclude: Usa ARRAY['none'] para no omitir ninguna, o especifica ARRAY['template0', 'postgres']
-    v_dbs_to_exclude TEXT[] := ARRAY['template0', 'postgres']; 
+    v_dbs_to_exclude TEXT[] := ARRAY['template0','template1', 'postgres']; 
 
     -- v_query_to_execute: EL PAYLOAD. Coloca aquí el DDL, DML o consulta administrativa a inyectar.
     -- NOTA: Al ser un bloque DO asíncrono vía dblink_exec, no devuelve un "Result Set" visual (como un SELECT tradicional). 
